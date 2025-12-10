@@ -1,0 +1,125 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Container */
+.splash-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Content */
+.splash-content h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    animation: fadeInUp 0.8s ease-in-out both;
+}
+
+.splash-content p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.8s ease-in-out 0.2s both;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* gap වැඩි කළා */
+    flex-wrap: wrap;
+    margin-top: 2rem; /* margin ටික වැඩි කළා */
+}
+
+.button-group .btn {
+    padding: 15px 40px; /* padding වැඩි කළා */
+    font-size: 1.2rem;  /* font size වැඩි කළා */
+    border: none;
+    border-radius: 35px; /* border radius ටික වැඩි කළා */
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Login button */
+.btn-login {
+    background: #fff;
+    color: #667eea;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* shadow එක add කලේ */
+}
+
+.btn-login:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px); /* hover effect */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Signup button */
+.btn-signup {
+    background: #ff6b6b;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn-signup:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+
+/* Spinner (optional) */
+.spinner {
+    margin-top: 3rem;
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animations */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .splash-content h1 {
+        font-size: 2rem;
+    }
+
+    .splash-content p {
+        font-size: 1rem;
+    }
+
+    .button-group .btn {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+}
